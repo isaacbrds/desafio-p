@@ -1,0 +1,49 @@
+<section class="py-3">
+  <%= form_tag(equipaments_path, method: :get) do %>
+  <div class="form-group mt-3 col-sm-10">
+      <%= t('search') %>
+      <%= text_field_tag(:name) %>
+      <%= submit_tag(t"Search") %>
+    <% end %>
+  </div>
+  
+  <br>
+  <table class="table">
+    <th><%= t('id') %></th>
+    <th><%= t('name') %></th>
+    <th><%= t('brand') %></th>
+    <th><%= t('kind') %></th>
+    <th colspan="3"> <%= link_to 'Adicionar equipament', new_equipament_path,  {:remote => true, 'data-bs-toggle' =>  "modal", 'data-bs-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+      <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content"></div>
+        </div>
+      </div></th> 
+  <% if @equipaments.count() > 0%>
+    <% @equipaments.each do |equipament| %>
+      <tr>
+        <td><%= equipament.id %></td>
+        <td><%= equipament.name %></td>
+        <td><%= equipament.kind %></td>
+        <td><%= equipament.brand %></td>
+        <td > <%= link_to t('edit'), edit_equipament_path(equipament) ,
+        class: 'btn btn-warning' %></td>
+        <td > <%= link_to t('show'), equipament_path(equipament),
+          class: 'btn btn-info'  %> </td>
+        <td > <%= link_to t('delete'), equipament_path(equipament),
+          method: :delete, data: { confirm: 'Você está certo disso ?' }, 
+          class: 'btn btn-danger'%> </td>
+      </tr>
+    <% end %>
+    <% else %>
+      <tr class="text-align center">No equipaments yet.</tr>
+    <% end %>
+  </table>
+  
+    
+  <div class="row">
+    <div class="text-center">
+      <%= paginate @equipaments %>
+    </div>  
+  </div>
+</section>
