@@ -1,0 +1,46 @@
+<section class="py-3">
+  <%= form_tag(places_path, method: :get) do %>
+  <div class="form-group mt-3 col-sm-10">
+      <%= t('search') %>
+      <%= text_field_tag(:name) %>
+      <%= submit_tag(t"Search") %>
+    <% end %>
+  </div>
+  
+  <br>
+  <table class="table">
+    <th><%= t('id') %></th>
+    <th><%= t('name') %></th>
+    <th><%= t('parent') %></th>
+    <th colspan="3"> <%= link_to 'Adicionar local', new_place_path, class: 'btn btn-primary btn-lg' %> </th>
+  <% if @places.count() > 0%>
+    <% @places.each do |place| %>
+      <tr>
+        <td><%= place.id %></td>
+        <td><%= place.name %></td>
+        <% if place.parent %>
+        <td><%= place.name %></td>
+        <% else %>
+          <td> Não há </td>
+        <% end %>
+        <td > <%= link_to t('edit'), edit_place_path(place) ,
+        class: 'btn btn-warning' %></td>
+        <td > <%= link_to t('show'), place_path(place),
+          class: 'btn btn-info'  %> </td>
+        <td > <%= link_to t('delete'), place_path(place),
+          method: :delete, data: { confirm: 'Você está certo disso ?' }, 
+          class: 'btn btn-danger'%> </td>
+      </tr>
+    <% end %>
+    <% else %>
+      <tr class="text-align center">No places yet.</tr>
+    <% end %>
+  </table>
+  
+    
+  <div class="row">
+    <div class="text-center">
+      <%= paginate @places %>
+    </div>  
+  </div>
+</section>
