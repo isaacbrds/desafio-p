@@ -1,7 +1,7 @@
 <section class="py-3">
   <%= form_tag(places_path, method: :get) do %>
   <div class="form-group mt-3 col-sm-10">
-      <%= t('search') %>
+      <%= t('search-l') %>
       <%= text_field_tag(:name) %>
       <%= submit_tag(t"Search") %>
     <% end %>
@@ -18,8 +18,8 @@
       <tr>
         <td><%= place.id %></td>
         <td><%= place.name %></td>
-        <% if place.parent %>
-        <td><%= place.name %></td>
+        <% if place.parent_id %>
+        <td><%= place.parent.name %></td>
         <% else %>
           <td> Não há </td>
         <% end %>

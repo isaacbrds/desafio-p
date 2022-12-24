@@ -1,0 +1,39 @@
+pt-BR:
+  activerecord:
+    errors:
+      models: 
+        equipament:
+          attributes:
+            quantity:
+              greater_than_or_equal_to: Quantidade não pode ser menor que zero
+              quantity: Quantidade não é suficiente 
+              not_a_number: Quantidade não declarada
+        order_item:
+          attributes:
+            quantity:
+              greater_than_or_equal_to: Quantidade não pode ser menor que zero
+              not_a_number: Quantidade não declarada
+    models:
+      equipament:
+        one: Equipamento
+        other: Equipamentos
+      place:
+        one: Local
+        other: Locais
+    attributes:
+      user:
+        name: Nome
+        email: E-mail 
+        password: Senha
+        password_confirmation: Confirme sua senha
+        remember_me: lembrar
+      equipament:
+        Id: Código
+        name: Nome
+        kind: Tipo
+        brand: Marca
+        place: Local
+        picture: Foto
+      place:
+        name: Nome
+        parent: Local
