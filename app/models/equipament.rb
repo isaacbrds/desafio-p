@@ -4,4 +4,6 @@ class Equipament < ApplicationRecord
   validates_presence_of :name, :kind, :brand
 
   has_one_attached :picture
+
+  paginates_per 5
 end
