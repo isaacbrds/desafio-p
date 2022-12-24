@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="col-md-3 mt-5">
-      <% if @equipament.picture.exist? %>
+      <% if @equipament.picture.persisted? %>
         <%= image_tag @equipament.picture %>
       <% else %>
         <h3>No picture available </h3>

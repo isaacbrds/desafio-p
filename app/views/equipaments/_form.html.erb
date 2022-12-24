@@ -13,9 +13,13 @@
     <%= form.label :brand %>
     <%= form.text_field :brand , class: "form-control" %>
   </div>
-  <div class="form-group">
+  <div class="form-group mt-2">
     <%= form.label :kind %>
-    <%= form.select :kind ,class: "form-control" %>
+    <%= form.select :kind , Equipament.kinds, class: "form-control" %>
+  </div>
+  <div class="form-group mt-2">
+    <%= form.label :place_id %>
+    <%= form.collection_select(:place_id, @places, :id, :name, include_blank: false, class: 'form-control' ) %>
   </div>
   <div class="form-group">
     <%= form.label :picture %>
