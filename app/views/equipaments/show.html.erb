@@ -1,0 +1,21 @@
+<div class="row d-flex justify-content-center mt-5 ">
+  <div class="col-md-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= @equipament.name %></h5>
+        <p class="card-text">Tipo: <%= @equipament.kind %></p>
+        <p class="card-text">Marca: <%= @equipament.brand %></p>
+      </div>
+    </div>
+    <div class="col-md-3 mt-5">
+      <% if @equipament.picture.exist? %>
+        <%= image_tag @equipament.picture %>
+      <% else %>
+        <h3>No picture available </h3>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-3-md">
+    <%= link_to t('back'), equipaments_path, class: "btn btn-primary" %>
+  </div>
+</div>
