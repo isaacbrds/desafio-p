@@ -23,8 +23,8 @@
   <img align="center" alt="isaac-Ruby" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/ruby/ruby-original.svg">
    <img align="center" alt="isaac-Rspec" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/rspec/rspec-original.svg">
     <img align="center" alt="isaac-Rails" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/rails/rails-plain.svg">
-    <img align="center" alt="isaac-Bootstrap" height="30" width="40" src=" https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/bootstrap/bootstrap-original.svg">
-     <img align="center" alt="isaac-Sqlite" height="30" width="40" src=" https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/sqlite/sqlite-original.svg">
+    <img align="center" alt="isaac-Bootstrap" height="30" width="40" src=" https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/bootstrap/bootstrap-plain.svg">
+     <img align="center" alt="isaac-Sqlite" height="30" width="40" src=" https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/sqlite/sqlite-plain.svg">
   
 
 </div>
