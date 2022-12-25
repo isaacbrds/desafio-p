@@ -1,7 +1,7 @@
 <section class="py-3">
   <%= form_tag(equipaments_path, method: :get) do %>
   <div class="form-group mt-3 col-sm-10">
-      <%= t('search') %>
+      <%= t('search-e') %>
       <%= text_field_tag(:name) %>
       <%= submit_tag(t"Search") %>
     <% end %>
@@ -11,9 +11,9 @@
   <table class="table">
     <th><%= t('id') %></th>
     <th><%= t('name') %></th>
-    <th><%= t('brand') %></th>
     <th><%= t('kind') %></th>
-    <th colspan="3"> <%= link_to 'Adicionar equipament', new_equipament_path,   class: 'btn btn-primary btn-lg' %> </th>
+    <th><%= t('brand') %></th>
+    <th colspan="3"> <%= link_to 'Adicionar equipamento', new_equipament_path,   class: 'btn btn-primary btn-lg' %> </th>
   <% if @equipaments.count() > 0%>
     <% @equipaments.each do |equipament| %>
       <tr>

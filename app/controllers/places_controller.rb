@@ -3,9 +3,9 @@ class PlacesController < ApplicationController
   before_action :set_place, only: %i[show edit destroy update]
   def index
     @places = Place.page(params[:page])
-    title_field = params[:title]
-    if title_field.present?
-      @places = Place.for_title(title_field).page(params[:page])
+    name_field = params[:name]
+    if name_field.present?
+      @places = Place.for_name(name_field).page(params[:page])
     end
   end
 
@@ -16,7 +16,7 @@ class PlacesController < ApplicationController
   def create
     @place = Place.new(place_params)
     if @place.save
-      redirect_to places_path, notice: 'place was successfully created'
+      redirect_to places_path, notice: 'place was successfully created!'
     else
       render :new
     end
@@ -27,20 +27,16 @@ class PlacesController < ApplicationController
 
   def update
     if @place.update(place_params)
-      redirect_to places_path, notice: 'place was successfully updated'
+      redirect_to places_path, notice: 'place was successfully updated!'
     else
       render :edit
     end
   end
 
   def destroy
-    begin
-      @place.destroy
-      redirect_to places_path, notice: 'place was successfully destroyed'
-    rescue ActiveRecord::DeleteRestrictionError
-      flash[:error] = 'place was not destroyed'
-      redirect_to places_path
-    end
+    @place.destroy
+    redirect_to places_path, notice: 'place was successfully destroyed!'
+
   end
 
   private
@@ -52,6 +48,6 @@ class PlacesController < ApplicationController
   end
 
   def place_params
-    params.require(:place).permit(:name, :brand, :kind, :picture)
+    params.require(:place).permit(:name, :parent_id)
   end
 end

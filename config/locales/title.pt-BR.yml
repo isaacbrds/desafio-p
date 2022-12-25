@@ -1,0 +1,81 @@
+pt-BR:
+  title: Título
+  description: Descrição
+  owner: Dono
+  next: Próximo
+  last: Último
+  new: Novo 
+  edit: Editar
+  show: Mostrar
+  delete: Deletar 
+  User: Usuário
+  leave blank: (Deixe em branco caso não queira alterar)
+  we need your: (Precisamos da sua senha atual para confirmar a mudança)
+  My Posts: Minhas Postagens
+  My Products: Meus Produtos
+  Purchases: Entradas
+  Orders: Saidas
+  My Purchases: Minhas Entradas
+  My Orders: Minhas Saidas
+  My Materials: Meus Materiais
+  add purchase items: Adicionar Material
+  remove purchase item: Remover Material
+  add order items: Adicionar Material
+  remove order item: Remover Material
+  Inventory Manager: Gerenciamento de Estoque
+  This is not a business hour: Não está no horário do expediente
+  Search: Buscar
+  equipament: Equipamento
+  equipaments: Equipamentos
+  Equipaments: Equipamentos
+  places: Locais
+  Places: Locais
+  Purchase: Entrada
+  id: Código
+  name: Nome
+  brand: Marca
+  kind: Tipo
+  picture: Foto
+  place: Local
+  Purchase Date: Data de Entrada
+  Order Date: Data de Saida
+  Client: Responsável
+  Detail: Detalhe
+  Product: Produto
+  parent: Sub Local
+  Order: Saída
+  Material: Material
+  Name: Nome
+  Quantity: Quantidade
+  logout: Deslogar
+  thumbnail: Imagem
+  update: Atualizar
+  back: Voltar
+  at: às
+  says: disse
+  comment: Comentar
+  add comment: Adicionar Comentário
+  Sign up: Registrar
+  Forgot your password?: Esqueci a senha
+  characters minimum: caracteres no mínimo
+  you don't have permission to edit this: Você não tem permissão para editar isso
+  notice:
+    post was successfully updated!: O post foi atualizado com sucesso
+    post was successfully detroyed!: O post foi destruído com sucesso
+    post was successfully created!: O post foi criado com sucesso
+    post was successfully imported!: O post foi importado com sucesso
+    post was not successfully imported!: O post não foi importado com sucesso
+    place was successfully updated!: O local foi atualizado com sucesso
+    place was successfully detroyed!: O local foi destruído com sucesso
+    place was successfully created!: O local foi criado com sucesso
+    place was successfully imported!: O local foi importado com sucesso
+    equipment was successfully updated!: O equipamento foi atualizado com sucesso
+    equipment was successfully detroyed!: O equipamento foi destruído com sucesso
+    equipment was successfully created!: O equipamento foi criado com sucesso
+    equipment was successfully imported!: O equipamento foi importado com sucesso
+    equipment was not successfully imported!: O equipamento não foi importado com sucesso
+  remember_me: lembrar
+  send: Enviar
+  create: Criar
+  search-e: Procurar pelo nome do equipamento
+  search-l: Procurar pelo nome do local

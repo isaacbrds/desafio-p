@@ -3,9 +3,9 @@ class EquipamentsController < ApplicationController
   before_action :set_equipament, only: %i[show edit destroy update]
   def index
     @equipaments = Equipament.page(params[:page])
-    title_field = params[:title]
-    if title_field.present?
-      @equipaments = Equipament.for_title(title_field).page(params[:page])
+    name_field = params[:name]
+    if name_field.present?
+      @equipaments = Equipament.for_name(name_field).page(params[:page])
     end
   end
 
@@ -17,7 +17,7 @@ class EquipamentsController < ApplicationController
     convert_kind
     @equipament = Equipament.new(equipament_params)
     if @equipament.save
-      redirect_to equipaments_path, notice: 'equipament was successfully created'
+      redirect_to equipaments_path, notice: 'equipament was successfully created!'
     else
       render :new
     end
@@ -29,20 +29,15 @@ class EquipamentsController < ApplicationController
   def update
     convert_kind
     if @equipament.update(equipament_params)
-      redirect_to equipaments_path, notice: 'equipament was successfully updated'
+      redirect_to equipaments_path, notice: 'equipament was successfully updated!'
     else
       render :edit
     end
   end
 
   def destroy
-    begin
       @equipament.destroy
-      redirect_to equipaments_path, notice: 'equipament was successfully destroyed'
-    rescue ActiveRecord::DeleteRestrictionError
-      flash[:error] = 'equipament was not destroyed'
-      redirect_to equipaments_path
-    end
+      redirect_to equipaments_path, notice: 'equipament was successfully destroyed!'
   end
 
   private
